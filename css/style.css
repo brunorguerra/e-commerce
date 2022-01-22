@@ -1,0 +1,289 @@
+header {
+  width: 100%;
+  height: 7rem;
+
+  background: var(--main);
+  border-bottom: 2px solid var(--borders);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 0 7rem;
+}
+header #title-page {
+  padding: 1rem;
+  transition: 0.15s linear;
+}
+header #title-page h1 {
+  color: var(--titles);
+  font-size: 2.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+header #title-page:active {
+  background: var(--hover);
+}
+header .input-search {
+  display: flex;
+  align-items: center;
+  max-width: 40rem;
+  width: 100%;
+  height: 4rem;
+  padding: 0 1rem;
+
+  background: var(--boxes);
+}
+header .input-search input {
+  width: 100%;
+  height: 100%;
+  /* padding: 0 0.5rem; */
+
+  font-size: 1.8rem;
+  background: inherit;
+}
+header .input-search > button {
+  width: 4rem;
+  height: 100%;
+
+  background: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.15s linear;
+}
+header .input-search > button:hover {
+  background: var(--borders);
+}
+header .input-search > button ion-icon[name="search-outline"] {
+  font-size: 2rem;
+  color: var(--icons);
+}
+
+header nav.login-cart ul {
+  display: flex;
+  gap: 3rem;
+}
+header nav.login-cart ul li {
+  width: auto;
+  height: 7rem;
+  padding: 0 1.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  font-weight: 400;
+  border-bottom: 1px solid transparent;
+
+  cursor: pointer;
+  transition: 0.15s linear;
+  color: var(--texts);
+}
+header nav.login-cart ul li:nth-child(1) ion-icon {
+  display: none;
+}
+header nav.login-cart ul li span,
+header nav.login-cart ul li ion-icon:last-child {
+  font-size: 1.8rem;
+}
+header nav.login-cart ul li ion-icon:first-child {
+  font-size: 2.4rem;
+}
+header nav.login-cart ul li:hover {
+  background: var(--hover);
+  border-color: var(--texts);
+  color: var(--titles);
+}
+header .aside-button {
+  width: 3rem;
+  height: 3rem;
+
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  position: relative;
+}
+header .aside-button > .line {
+  width: 3rem;
+  height: 0.4rem;
+  border-radius: 0.5rem;
+
+  background: var(--icons);
+  position: relative;
+  transition: all 0.25s linear;
+}
+header .aside-button > .line::after,
+header .aside-button > .line::before {
+  content: "";
+  position: absolute;
+  background: var(--icons);
+  border-radius: 1rem;
+  width: 100%;
+  height: 0.4rem;
+  transition: all 0.25s linear;
+}
+header .aside-button > .line::before {
+  transform: translateY(-1rem);
+}
+header .aside-button > .line::after {
+  transform: translateY(1rem);
+}
+header .asideButton-active .line {
+  transform: translateX(-5rem);
+  background: transparent;
+}
+header .asideButton-active .line::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+header .asideButton-active .line::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+header aside.aside-menu {
+  position: fixed;
+  top: 6.9rem;
+  left: -40rem;
+  z-index: 3;
+
+  max-width: 40rem;
+  min-width: 30rem;
+  height: calc(100vh - 6.9rem);
+
+  background: var(--main);
+  box-shadow: 0.1rem 0.2rem 0.4rem var(--titles);
+
+  transition: 0.25s linear;
+}
+header aside.aside-menu.asideMenu-active {
+  left: 0rem;
+}
+header aside.aside-menu nav,
+header aside.aside-menu nav ul,
+header aside.aside-menu nav ul li > a,
+header aside.aside-menu nav ul li:last-child > button {
+  width: 100%;
+  height: 100%;
+}
+header aside.aside-menu nav ul li,
+header aside.aside-menu nav ul li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header aside.aside-menu nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+
+  padding: 2rem 1rem;
+}
+header aside.aside-menu nav ul li {
+  width: 100%;
+  height: 4.5rem;
+}
+header aside.aside-menu nav ul li > a {
+  font-size: 1.8rem;
+  color: var(--texts);
+  padding: 0 1rem;
+
+  justify-content: space-between;
+}
+header aside.aside-menu nav ul li > a:hover {
+  color: var(--titles);
+  background: var(--hover);
+}
+header aside.aside-menu nav ul li:last-child {
+  height: 7rem;
+  border-top: 2px solid var(--borders);
+  padding-top: 2rem;
+}
+header aside.aside-menu nav ul li:last-child > button {
+  background: var(--boxes);
+  cursor: pointer;
+  color: var(--titles);
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+
+  transition: 0.15s ease;
+}
+header aside.aside-menu nav ul li:last-child > button:hover {
+  background: var(--texts);
+  color: var(--borders);
+}
+
+@media (max-width: 1200px) {
+  header {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 1130px) {
+  header nav.login-cart ul li span,
+  header nav.login-cart ul li ion-icon:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 935px) {
+  header nav.login-cart ul {
+    gap: 1rem;
+  }
+  header #title-page {
+    margin: 0 2rem;
+  }
+  header #title-page h1 {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 635px) {
+  header .input-search {
+    display: none;
+  }
+  header nav.login-cart ul li:nth-child(1) ion-icon {
+    display: inline-block;
+  }
+}
+@media (max-width: 475px) {
+  header nav.login-cart {
+    margin-left: 0rem;
+  }
+  header #title-page {
+    margin: 0 1rem;
+  }
+  header #title-page h1 {
+    font-size: 2rem;
+  }
+  header nav.login-cart ul {
+    gap: 0;
+  }
+  header nav.login-cart ul li {
+    padding: 0 0.5rem;
+  }
+  header aside.aside-menu {
+    width: 100vw;
+    min-width: 0;
+  }
+}
+@media (max-width: 310px) {
+  header {
+    height: auto;
+    padding: 2rem 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+  header #title-page {
+    margin-top: 1rem;
+  }
+}

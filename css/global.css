@@ -1,0 +1,40 @@
+:root {
+  --icons: #a8a8b3;
+  --titles: #e1e1e6;
+  --texts: #a8a8b3;
+  --main: #121214;
+  --boxes: #201e24;
+}
+html[data-theme="dark"] {
+  --borders: #d2d2d2;
+  --icons: #a8a8b3;
+  --titles: #e1e1e6;
+  --texts: #a8a8b3;
+  --main: #121214;
+  --boxes: #201e24;
+}
+html[data-theme="light"] {
+  --hover: #f3f4f6;
+  --borders: #d2d2d2;
+  --icons: #5f6368;
+  --titles: #202124;
+  --texts: #5f6368;
+  --main: #fefffe;
+  --boxes: #f1f2f6;
+}
+html {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+body {
+  background: var(--main);
+  font-family: "Poppins", sans-serif;
+}
