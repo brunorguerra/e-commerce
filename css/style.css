@@ -2,6 +2,10 @@ header {
   width: 100%;
   height: 7rem;
 
+  position: fixed;
+  left: 0;
+  top: 0;
+
   background: var(--main);
   border-bottom: 2px solid var(--borders);
 
@@ -10,6 +14,8 @@ header {
   justify-content: space-around;
 
   padding: 0 7rem;
+  transition: 0.25s ease;
+  z-index: 99;
 }
 header #title-page {
   padding: 1rem;
@@ -17,7 +23,7 @@ header #title-page {
 }
 header #title-page h1 {
   color: var(--titles);
-  font-size: 2.8rem;
+  font-size: 2.3rem;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -39,7 +45,7 @@ header .input-search input {
   height: 100%;
   /* padding: 0 0.5rem; */
 
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   background: inherit;
 }
 header .input-search > button {
@@ -82,15 +88,15 @@ header nav.login-cart ul li {
   transition: 0.15s linear;
   color: var(--texts);
 }
-header nav.login-cart ul li:nth-child(1) ion-icon {
+header nav.login-cart ul li:nth-child(1) {
   display: none;
 }
 header nav.login-cart ul li span,
 header nav.login-cart ul li ion-icon:last-child {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 header nav.login-cart ul li ion-icon:first-child {
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 header nav.login-cart ul li:hover {
   background: var(--hover);
@@ -251,8 +257,8 @@ header aside.aside-menu nav ul li:last-child > button:hover {
   header .input-search {
     display: none;
   }
-  header nav.login-cart ul li:nth-child(1) ion-icon {
-    display: inline-block;
+  header nav.login-cart ul li:nth-child(1) {
+    display: flex;
   }
 }
 @media (max-width: 475px) {
@@ -286,4 +292,249 @@ header aside.aside-menu nav ul li:last-child > button:hover {
   header #title-page {
     margin-top: 1rem;
   }
+}
+
+main {
+  padding-top: 7rem;
+}
+main #banner {
+  position: relative;
+  inset: 0;
+
+  width: 100%;
+  height: calc(100vh - 7rem);
+
+  overflow: hidden;
+}
+main #banner .slider {
+  height: 100%;
+  display: flex;
+  transition: all 0.3s ease;
+}
+main #banner .slider-item {
+  width: 100vw;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.5rem 0;
+  margin: 0 6rem;
+}
+main #banner .slider-item .type-item {
+  display: block;
+  width: 100%;
+  text-align: right;
+  padding: 0.5rem 2rem;
+}
+main #banner .slider-item .type-item p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-shadow: 0.1rem 0.1rem 0.2rem var(--titles);
+}
+main #banner .slider-item:nth-child(1) .type-item p {
+  text-shadow: 0rem 0rem 0.2rem var(--red);
+  color: var(--red);
+}
+main #banner .slider-item:nth-child(2) .type-item p {
+  text-shadow: 0rem 0rem 0.2rem var(--green);
+  color: var(--green);
+}
+main #banner .slider-item:nth-child(3) .type-item p {
+  text-shadow: 0rem 0rem 0.2rem var(--blue);
+  color: var(--blue);
+}
+
+main #banner .slider-item .content {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12rem;
+}
+main #banner .slider-item .content .text h2 {
+  font-size: 3.2rem;
+  color: var(--titles);
+}
+main #banner .slider-item:nth-child(1) .content .text h2 > span {
+  color: var(--red);
+  text-shadow: 0rem 0rem 0.2rem var(--red);
+}
+main #banner .slider-item:nth-child(2) .content .text h2 > span {
+  color: var(--green);
+  text-shadow: 0rem 0rem 0.2rem var(--green);
+}
+main #banner .slider-item:nth-child(3) .content .text h2 > span {
+  color: var(--blue);
+  text-shadow: 0rem 0rem 0.2rem var(--blue);
+}
+main #banner .slider-item .content .text p {
+  font-size: 1.6rem;
+  color: var(--texts);
+  max-width: 40rem;
+  margin: 1.2rem 0;
+}
+main #banner .slider-item .content .text a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 2px;
+  border: 2px solid transparent;
+  transition: 0.25s ease;
+}
+main #banner .slider-item .content .text a:nth-child(1) {
+  background: var(--texts);
+  color: var(--main);
+}
+main #banner .slider-item .content .text a:nth-child(1):hover {
+  opacity: 0.8;
+}
+main #banner .slider-item .content .text a:nth-child(2) {
+  border-color: var(--texts);
+  color: var(--texts);
+  margin-left: 1rem;
+}
+main #banner .slider-item .content .text a:nth-child(2):hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+main #banner .slider-item .content .image {
+  max-width: 40rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main #banner .slider-item .content .image:nth-child(1) img {
+  width: 100%;
+}
+main #banner .slider-item .content .image:nth-child(2) img {
+  width: 100%;
+}
+main #banner .slider-item .content .image:nth-child(3) img {
+  width: 100%;
+}
+
+main #banner .slider-controls .control {
+  position: absolute;
+  height: 90%;
+  width: 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main #banner .slider-controls .control:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+main #banner .slider-controls .control:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+main #banner .slider-controls .control .back,
+main #banner .slider-controls .control .forward {
+  border-radius: 10px;
+  padding: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.8rem;
+  color: var(--icons);
+
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+main #banner .slider-controls .control .back:hover,
+main #banner .slider-controls .control .forward:hover {
+  color: var(--titles);
+}
+main #banner .slider-controls .control .back:active,
+main #banner .slider-controls .control .forward:active {
+  transform: scale(1.35);
+}
+
+@media (max-width: 945px) {
+  main #banner .slider-item .content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  main #banner .slider-item .content .text {
+    order: 2;
+  }
+  main #banner .slider-item .content .image {
+    order: 1;
+    max-width: 30rem;
+  }
+}
+@media (max-width: 475px) {
+  main #banner .slider-item .type-item {
+    padding: 0.5rem 0;
+  }
+}
+@media (max-width: 445px) {
+  main #banner .slider-item .type-item p {
+    font-size: 1.2rem;
+  }
+  main #banner .slider-item .content .text h2 {
+    font-size: 2.6rem;
+  }
+  main #banner .slider-item .content .text p {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 356px) {
+  main #banner .slider-item .text .links {
+    display: flex;
+    flex-direction: column;
+  }
+  main #banner .slider-item .text .links a:nth-child(2) {
+    margin-left: 0;
+  }
+}
+
+main #category {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 3rem 1rem;
+}
+main #category .card {
+  width: 12rem;
+  height: 10rem;
+
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.8rem;
+  color: var(--icons);
+
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+main #category .card:hover {
+  background: var(--hover);
+  color: var(--titles);
+  box-shadow: 1px 1px 5px 2px var(--borders), -1px -1px 5px 2px var(--borders);
+  z-index: 2;
+}
+main #category .card ion-icon {
+  font-size: 2.2rem;
+}
+main #category .card span {
+  font-size: 1.5rem;
 }
