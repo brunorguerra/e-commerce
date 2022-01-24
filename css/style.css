@@ -644,6 +644,7 @@ main #lastRelease > .header {
 main #lastRelease > .header h3 {
   font-size: 2.2rem;
   color: var(--titles);
+  margin-right: 1rem;
 }
 main #lastRelease > .header a {
   font-size: 1.6rem;
@@ -797,5 +798,87 @@ main #lastRelease > .main .text p:nth-child(3) > span.markup {
 @media (max-width: 300px) {
   main #lastRelease > .main .card {
     width: 100%;
+  }
+}
+
+main #support {
+  width: 100%;
+  background: var(--boxes);
+  padding: 6rem 2rem;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20rem;
+}
+main #support .title {
+  text-align: center;
+}
+main #support .title h2 {
+  margin-bottom: 1rem;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--titles);
+  letter-spacing: 0.6rem;
+  word-spacing: 1rem;
+}
+main #support .title p {
+  font-size: 1.8rem;
+  color: var(--texts);
+}
+main #support > .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+main #support > .content > .card {
+  width: 30rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--borders);
+}
+main #support > .content > .card a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.85rem;
+  font-weight: 500;
+  color: var(--blue);
+}
+main #support > .content > .card p {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  color: var(--texts);
+}
+@media (max-width: 890px) {
+  main #support {
+    flex-direction: column;
+    gap: 9rem;
+  }
+  main #support > .content {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 375px) {
+  main #support > .content {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  main #support .title h2 {
+    font-size: 2rem;
+    letter-spacing: initial;
+  }
+  main #support .title p {
+    font-size: 1.5rem;
+  }
+  main #support > .content > .card a {
+    font-size: 1.6rem;
+  }
+  main #support > .content > .card p {
+    font-size: 1.4rem;
   }
 }
