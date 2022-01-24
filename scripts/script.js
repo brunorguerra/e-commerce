@@ -68,3 +68,31 @@ let slider = {
 setInterval(() => {
   slider.goForward();
 }, 7000);
+
+// Header function click and hover
+let boxTranslate = false;
+function translatePage() {
+  if (!boxTranslate) {
+    document.querySelector(
+      "header aside.aside-menu nav ul li:nth-child(5)"
+    ).style.display = "flex";
+    document.querySelector(
+      "header aside.aside-menu nav ul li:nth-child(4) button"
+    ).style.background = "var(--hover)";
+    document.querySelector(
+      "header aside.aside-menu nav ul li:nth-child(4) > button ion-icon:last-child"
+    ).style.transform = "rotateX(180deg)";
+    boxTranslate = true;
+  } else {
+    document.querySelector(
+      "header aside.aside-menu nav ul li:nth-child(5)"
+    ).style.display = "none";
+    document.querySelector(
+      "header aside.aside-menu nav ul li:nth-child(4) button"
+    ).style.background = "var(--main)";
+    document.querySelector(
+      "header aside.aside-menu nav ul li:nth-child(4) > button ion-icon:last-child"
+    ).style.transform = "rotateX(0deg)";
+    boxTranslate = false;
+  }
+}

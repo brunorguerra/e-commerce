@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>E-commerce</title>
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -15,7 +18,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body ondragstart="return false">
     <header>
       <aside class="aside-menu">
         <nav>
@@ -35,11 +38,16 @@
                 >Acessórios <ion-icon name="chevron-forward-outline"></ion-icon
               ></a>
             </li>
-            <li>
+            <li onclick="translatePage()">
               <button>
                 <ion-icon name="globe-outline"></ion-icon>
                 <span>BR/PT</span>
+                <ion-icon name="chevron-down-outline"></ion-icon>
               </button>
+            </li>
+            <li>
+              <a href="#">Brazil/Português</a>
+              <a href="#">United States/English</a>
             </li>
           </ul>
         </nav>
@@ -163,17 +171,173 @@
       </section>
 
       <section id="category">
-        <div class="card">
-          <ion-icon name="laptop-outline"></ion-icon>
-          <span>Notebook</span>
+        <h2>Categorias</h2>
+        <div class="content">
+          <div class="card">
+            <ion-icon name="laptop-outline"></ion-icon>
+            <span>Notebook</span>
+          </div>
+          <div class="card">
+            <ion-icon name="desktop-outline"></ion-icon>
+            <span>Desktop</span>
+          </div>
+          <div class="card">
+            <ion-icon name="headset-outline"></ion-icon>
+            <span>Acessórios</span>
+          </div>
         </div>
-        <div class="card">
-          <ion-icon name="desktop-outline"></ion-icon>
-          <span>Desktop</span>
+      </section>
+
+      <section id="options">
+        <div class="title">
+          <h2>
+            Óla novamente, aproveite nossos descontos
+            <ion-icon name="happy-outline"></ion-icon>.
+          </h2>
         </div>
-        <div class="card">
-          <ion-icon name="headset-outline"></ion-icon>
-          <span>Acessórios</span>
+        <div class="content">
+          <div class="card">
+            <h2>
+              <ion-icon name="pricetag-outline"></ion-icon>
+              Melhores Ofertas
+            </h2>
+            <div class="description">
+              <p>
+                Os melhores descontos escolhidos para você, faça as compras!
+              </p>
+            </div>
+            <a href="#">Comprar agora</a>
+          </div>
+          <div class="card">
+            <h2>
+              <ion-icon name="cart-outline"></ion-icon>
+              Frete Grátis
+            </h2>
+            <div class="description">
+              <p>
+                Frete Grátis, para produtos selecionados. Envio para todo o
+                Brasil.
+              </p>
+            </div>
+            <a href="#">Aproveite</a>
+          </div>
+          <div class="card">
+            <h2>
+              <ion-icon name="person-add-outline"></ion-icon>
+              Cadastre-se
+            </h2>
+            <div class="description">
+              <p>
+                Cadastre-se agora e ja receba um desconto de primeira compra.
+              </p>
+            </div>
+            <a href="#">Ganhar Desconto</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="lastRelease">
+        <div class="header">
+          <h3>Últimos Lançamentos</h3>
+          <a href="#">Ver tudo</a>
+        </div>
+
+        <div class="main">
+          <div class="card">
+            <div class="image"></div>
+            <div class="text">
+              <p>Notebook Ryzen Gamer</p>
+              <p>R$ 3990.90</p>
+              <p
+                title="Design térmico otimizado, tela Full HD de 120 Hz e equipado com
+              as mais recentes placas NVIDIA® e
+              processadores AMD Ryzen™ 5000.
+              Teclado RGB."
+              >
+                Design térmico otimizado, tela Full HD de 120 Hz e equipado com
+                as mais recentes placas <span class="markup">NVIDIA®</span> e
+                processadores <span class="markup">AMD Ryzen™ 5000</span>.
+                Teclado RGB.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image"></div>
+            <div class="text">
+              <p>Notebook Ryzen Gamer</p>
+              <p>R$ 3990.90</p>
+              <p
+                title="Ultrafino com leitor de impressão digital, teclado numérico e
+              processadores
+              Intel® Core™ de 11ª Geração."
+              >
+                Ultrafino com leitor de impressão digital, teclado numérico e
+                processadores
+                <span class="markup">Intel® Core™ de 11ª Geração</span>.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image"></div>
+            <div class="text">
+              <p>Notebook Ryzen Gamer</p>
+              <p>R$ 3990.90</p>
+              <p
+                title="Notebook premium compacto de 13' projetado com detalhes precisos
+              e desempenho incomparável. Adicione a assistência Premium para
+              suporte 24h todos os dias."
+              >
+                Notebook premium compacto de 13" projetado com detalhes precisos
+                e desempenho incomparável. Adicione a assistência Premium para
+                suporte 24h todos os dias.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image"></div>
+            <div class="text">
+              <p>Notebook Ryzen Gamer</p>
+              <p>R$ 3990.90</p>
+              <p
+                title="Produzido no Brasil e equipado com as mais recentes placa NVIDIA®, tela Full HD de 165Hz e Intel® Core™ de 11ª Geração. Teclado RGB."
+              >
+                Produzido no Brasil e equipado com as mais recentes placas
+                <span class="markup">NVIDIA®</span>, tela Full HD de 165 Hz e
+                <span class="markup">Intel® Core™ de 11ª Geração</span>. Teclado
+                RGB.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image"></div>
+            <div class="text">
+              <p>Notebook Ryzen Gamer</p>
+              <p>R$ 3990.90</p>
+              <p
+                title=" Design moderno e sustentável com tela Full HD, 3 lados de bordas
+              finas e webcam HD integrada. Equipado com processadores AMD Ryzen™. Na cor prata."
+              >
+                Design moderno e sustentável com tela Full HD, 3 lados de bordas
+                finas e webcam HD integrada. Equipado com processadores
+                <span class="markup">AMD Ryzen™</span>. Na cor prata.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image"></div>
+            <div class="text">
+              <p>Notebook Ryzen Gamer</p>
+              <p>R$ 3990.90</p>
+              <p
+                title="Design mais leve que a geração anterior. Carregamento mais rápido com ExpressCharge™."
+              >
+                Design mais leve que a geração anterior.
+                <span class="markup"
+                  >Carregamento mais rápido com ExpressCharge™</span
+                >.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

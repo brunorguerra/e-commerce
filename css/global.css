@@ -10,14 +10,14 @@
   --blue: #0063b8;
   --yellow: #f0fc49;
 }
-html[data-theme="dark"] {
+/* html[data-theme="dark"] {
   --borders: #d2d2d2;
   --icons: #a8a8b3;
   --titles: #e1e1e6;
   --texts: #a8a8b3;
   --main: #121214;
   --boxes: #201e24;
-}
+} */
 html[data-theme="light"] {
   --hover: #f3f4f6;
   --borders: #d2d2d2;
@@ -42,4 +42,7 @@ html {
 body {
   background: var(--main);
   font-family: "Poppins", sans-serif;
+}
+ion-icon {
+  transition: all 0.25s linear;
 }
