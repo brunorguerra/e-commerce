@@ -38,17 +38,6 @@
                 >Acessórios <ion-icon name="chevron-forward-outline"></ion-icon
               ></a>
             </li>
-            <li onclick="translatePage()">
-              <button>
-                <ion-icon name="globe-outline"></ion-icon>
-                <span>BR/PT</span>
-                <ion-icon name="chevron-down-outline"></ion-icon>
-              </button>
-            </li>
-            <li>
-              <a href="#">Brazil/Português</a>
-              <a href="#">United States/English</a>
-            </li>
           </ul>
         </nav>
       </aside>
@@ -373,9 +362,118 @@
           </div>
         </div>
       </section>
+
+      <section id="mostViewed">
+        <div class="title">
+          <h2>Mais Visualizados</h2>
+          <p>Produtos que a galera mais viu.</p>
+        </div>
+
+        <div id="carousel">
+          <div class="carouselBox">
+            <div class="carousel-item">
+              <div class="image">
+                <a href="#">Comprar</a>
+              </div>
+              <div class="text">
+                <h3>Desktop XPS</h3>
+                <p>R$ 4990.90</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="image">
+                <a href="#">Comprar</a>
+              </div>
+              <div class="text">
+                <h3>Vostro Desktop</h3>
+                <p>R$ 2698.00</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="image">
+                <a href="#">Comprar</a>
+              </div>
+              <div class="text">
+                <h3>Desktop OptiPlex</h3>
+                <p>R$ 2960.00</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="image">
+                <a href="#">Comprar</a>
+              </div>
+              <div class="text">
+                <h3>All in One Inspiron 20 3000</h3>
+                <p>R$ 5109.90</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="image">
+                <a href="#">Comprar</a>
+              </div>
+              <div class="text">
+                <h3>Desktop Small OptiPlex</h3>
+                <p>R$ 5249.90</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="image">
+                <a href="#">Comprar</a>
+              </div>
+              <div class="text">
+                <h3>All in One Inspiron 24 1600</h3>
+                <p>R$ 6390.90</p>
+              </div>
+            </div>
+          </div>
+
+          <a class="switchLeft sliderButton" onclick="carouselScrollLeft()"
+            ><ion-icon name="chevron-back-outline"></ion-icon
+          ></a>
+          <a class="switchRight sliderButton" onclick="carouselScrollRight()"
+            ><ion-icon name="chevron-forward-outline"></ion-icon
+          ></a>
+        </div>
+      </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <a href="#" class="logo">
+        <h1>E-commerce</h1>
+      </a>
+
+      <div class="content">
+        <div class="footer-account footer-link">
+          <h4>Conta</h4>
+          <div class="links">
+            <a href="#">Minha Conta</a>
+            <a href="#">Status do Pedido</a>
+            <a href="#">Meus Produtos</a>
+          </div>
+        </div>
+
+        <div class="footer-support footer-link">
+          <h4>Suporte</h4>
+          <div class="links">
+            <a href="#">Página do Suporte</a>
+            <a href="#">Fale Conosco</a>
+          </div>
+        </div>
+
+        <div class="footer-contact footer-link">
+          <h4>Contato</h4>
+          <div class="links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Youtube</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="scrollTop" onclick="ScrollTop()">
+        <ion-icon name="chevron-up-outline"></ion-icon>
+      </div>
+    </footer>
 
     <script
       type="module"
@@ -385,6 +483,10 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <script src="./scripts/script.js"></script>
+
+    <script src="./scripts/headerToggleShow.js"></script>
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/slider.js"></script>
+    <script src="./scripts/carousel.js"></script>
   </body>
 </html>
