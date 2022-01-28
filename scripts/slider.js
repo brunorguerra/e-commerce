@@ -1,10 +1,6 @@
 let currentSlider = 0;
-let totalSlides = document.querySelectorAll(
-  "main #banner .slider .slider-item"
-).length;
-document.querySelector(
-  "main #banner .slider"
-).style.width = `calc(100vw * ${totalSlides})`;
+let totalSlides = $("main #banner .slider .slider-item").length;
+$("main #banner .slider").css("width", `calc(100vw * ${totalSlides})`);
 let slider = {
   goBack: () => {
     currentSlider--;
@@ -18,9 +14,7 @@ let slider = {
   },
   updateMargin: () => {
     let newMargin = currentSlider * 100;
-    document.querySelector(
-      "main #banner .slider"
-    ).style.marginLeft = `-${newMargin}vw`;
+    $("main #banner .slider").css("marginLeft", `-${newMargin}vw`);
   },
 };
 setInterval(() => {

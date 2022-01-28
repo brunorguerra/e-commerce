@@ -1,23 +1,16 @@
 let lastScrollTop = 0;
-let header = document.querySelector("header");
+let header = $("header");
 
-let Header = {
-  hideAndShowHeader: () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) {
-      header.style.top = `-${header.clientHeight}px`;
-    } else {
-      header.style.top = "0";
-    }
-    return (lastScrollTop = scrollTop);
-  },
-};
-window.addEventListener("scroll", Header.hideAndShowHeader);
+$(document).scroll(() => {
+  let scrollTop = $(window).scrollTop() || $(document).scrollTop();
+  if (scrollTop > lastScrollTop) {
+    header.css("top", `-${header.outerHeight()}px`);
+  } else {
+    header.css("top", "0");
+  }
+  return (lastScrollTop = scrollTop);
+});
 
-function ScrollTop() {
-  document.documentElement.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
-}
+$(".scrollTop").click(() => {
+  $(document).scrollTop(0);
+});

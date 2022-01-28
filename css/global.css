@@ -29,6 +29,7 @@ html[data-theme="light"] {
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 * {
   margin: 0;

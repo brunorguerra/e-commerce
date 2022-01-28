@@ -1,28 +1,29 @@
-const sliders = document.querySelector(".carouselBox");
+const sliders = $(".carouselBox");
 let scrollPerClick;
 let ImagePadding = 20;
 
-scrollPerClick =
-  document.querySelector(".carousel-item").clientWidth + ImagePadding;
+scrollPerClick = $(".carousel-item").width() + ImagePadding;
 
 let scrollAmount = 0;
 
-function carouselScrollLeft() {
-  sliders.scrollTo({
-    top: 0,
-    left: (scrollAmount -= scrollPerClick),
-    behavior: "smooth",
-  });
-
-  scrollAmount < 0 ? (scrollAmount = 0) : scrollAmount;
-}
-
-function carouselScrollRight() {
-  if (scrollAmount <= sliders.scrollWidth - sliders.clientWidth) {
-    sliders.scrollTo({
-      top: 0,
-      left: (scrollAmount += scrollPerClick),
-      behavior: "smooth",
-    });
+$("#carousel .switchLeft").click(() => {
+  sliders.animate(
+    {
+      scrollLeft: (scrollAmount -= scrollPerClick),
+    },
+    500
+  );
+  if (scrollAmount < 0) {
+    scrollAmount = 0;
   }
-}
+});
+$("#carousel .switchRight").click(() => {
+  if (scrollAmount <= sliders[0].scrollWidth - sliders.width()) {
+    sliders.animate(
+      {
+        scrollLeft: (scrollAmount += scrollPerClick),
+      },
+      500
+    );
+  }
+});
